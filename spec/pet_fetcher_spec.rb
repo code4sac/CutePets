@@ -11,6 +11,8 @@ describe 'PetFetcher' do
 
   describe '.get_petfinder_pet' do
     it 'returns a hash of pet data when the API request is successful' do
+      ENV['petfinder_key'] = 'your_petfinder_key_goes_here'
+      ENV['petfinder_shelter_id'] = 'shelter_id_goes_here'
       VCR.use_cassette('petfinder', record: :once) do
         pet_hash = PetFetcher.get_petfinder_pet
         pet_hash[:description].must_equal 'altered male ferret'

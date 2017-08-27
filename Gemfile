@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
 ruby '2.4.1'
 
 gem 'dotenv'
@@ -11,6 +10,7 @@ gem 'twitter'
 group :development do
   gem 'rubocop'
 end
+gem 'koala'
 
 group :test do
   gem 'minitest'
